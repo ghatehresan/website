@@ -1,11 +1,11 @@
 # برند تولیدکنندهٔ قطعه — طرح بدون taxonomy موازی
 
-**واقعیت نصب:** [`product_brand` ثبت شده](https://ghatehresan.ir/wp-json/wp/v2/taxonomies)، ولی [بدون term منتشرشده](https://ghatehresan.ir/wp-json/wp/v2/product_brand?per_page=100&_fields=id,slug,name,count) است. هم‌زمان [`pa_brand` موجود](https://ghatehresan.ir/wp-json/wc/store/v1/products/attributes)، با [ترم‌های الکترونیکی نمونه](https://ghatehresan.ir/wp-json/wc/store/v1/products/attributes/2/terms?per_page=100) (ازجمله چند نام/slug نامنطبق) است. Woo Store API برندهای محصول را `[]` برمی‌گرداند. سامانهٔ مدیریت برند را به‌صورت `products.brand` متن آزاد نگه می‌دارد و محصولات SQLite همراه مخزن صفر است. **برند واقعی قطعات از این منابع قابل استخراج نیست.**
+**واقعیت نصب:** [`product_brand` ثبت شده](https://ghatehresan.ir/wp-json/wp/v2/taxonomies) ولی [بدون term منتشرشده](https://ghatehresan.ir/wp-json/wp/v2/product_brand?per_page=100&_fields=id,slug,name,count&_audit=20260924b) است. **عکس اولیه:** `pa_brand` با ۸ ترم نمونهٔ الکترونیکی و Attributeهای رنگ/سایز وجود داشت. **پس از پاک‌سازی اعلام‌شده توسط مالک (۲۴ سپتامبر ۲۰۲۶):** [Store API ویژگی‌ها](https://ghatehresan.ir/wp-json/wc/store/v1/products/attributes) اکنون `[]` و مسیر [ترم‌های ویژگی سابق](https://ghatehresan.ir/wp-json/wc/store/v1/products/attributes/2/terms?per_page=100&_audit=20260924b) خطای JSON 404 برمی‌گرداند؛ `product_brand` همچنان خالی است. سامانهٔ مدیریت برند را به‌صورت `products.brand` متن آزاد نگه می‌دارد و محصولات SQLite همراه مخزن صفر است. **برند واقعی قطعات از این منابع قابل استخراج نیست.**
 
 ## تصمیم مشروط
 
 - برای صفحهٔ برند/فیلتر یک‌جا از **همان `product_brand` موجود** بهره ببرید؛ taxonomy جدید `gr_brand` و Attribute موازی برای برند نسازید. منبع ثبت‌کنندهٔ `product_brand` و ساختار term meta/URL آن را در WP Admin و staging تأیید کنید.
-- مهاجرت `pa_brand → product_brand` فقط برای ترم و کالای *واقعاً معتبر* پس از ممیزی؛ ترم‌های Apple/Canon/Dell دمویی به برند قطعه بدل نمی‌شوند. پیوند فروش و SEO قدیمی در صورت وجود طبق [redirect-plan.md](redirect-plan.md) رسیدگی شود.
+- در وضعیت عمومی تازه Attribute/ترم سابق `pa_brand` دیده نمی‌شود؛ بنابراین **مهاجرت خودکار از آن موضوعیت ندارد**. اگر رکوردهایی در admin/backup مانده‌اند، فقط دادهٔ *واقعاً معتبر* پس از ممیزی قابل انتقال است؛ ترم‌های Apple/Canon/Dell دمویی به برند قطعه بدل نمی‌شوند. URL و SEO قدیمی در صورت وجود طبق [redirect-plan.md](redirect-plan.md) رسیدگی شود.
 - «برند قطعه‌رسان» صاحب هویت سایت است؛ «برند خودرو» سازندهٔ خودرو است؛ «برند محصول» سازندهٔ قطعه است. روابط را در UI/Schema مخلوط نکنید.
 
 ## حداقل دادهٔ term معتبر

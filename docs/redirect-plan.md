@@ -1,8 +1,10 @@
 # نقشهٔ محافظت از URLها — قبل از هر حذف/تغییر permalink
 
-**وضعیت:** inventory زیر از API عمومی در ۲۴ سپتامبر ۲۰۲۶ استخراج و در این سند *ثبت* شده است؛ **crawl کامل، تحلیل ورودی/بک‌لینک، نگاشت مقصد و ریدایرکت اجرا نشده‌اند.** نشانی‌های فعلی محصولات/مقالات الکترونیکی demo هستند؛ هر 301 باید به محتوای **معادل واقعی** باشد، نه به قطعات خودرو/خانه به‌زور.
+**وضعیت تاریخی:** inventory زیر از API عمومی *پیش از پاک‌سازی اعلام‌شده توسط مالک* در ۲۴ سپتامبر ۲۰۲۶ ثبت شد؛ **crawl کامل، تحلیل ورودی/بک‌لینک، نگاشت مقصد و ریدایرکت از طرف ما اجرا نشده‌اند.** این‌ها URLهای **سابق** محصولات/مقالات الکترونیکی demo هستند؛ هر 301 باید به محتوای **معادل واقعی** باشد، نه به قطعات خودرو/خانه به‌زور.
 
-## موجودی عمومیِ محصولات منتشرشده (۱۸ عدد)
+**راستی‌آزمایی پس از پاک‌سازی:** [REST محصولات](https://ghatehresan.ir/wp-json/wp/v2/product?per_page=100&_fields=id,slug&_audit=20260924b) و [REST نوشته‌ها](https://ghatehresan.ir/wp-json/wp/v2/posts?per_page=100&_fields=id,slug&_audit=20260924b) `[]`؛ نمونهٔ URL قدیمی [محصول](https://ghatehresan.ir/product/canon-i-sensys-lbp722cdw/) و [نوشته](https://ghatehresan.ir/best-gaming-laptop-models/?_audit=20260924b) متن «پیدا نشد» نشان می‌دهند، اما **HTTP status قابل تأیید نبود**. [یک دستهٔ قدیمی](https://ghatehresan.ir/product-category/megaelectronic_accessories/?_audit=20260924b) هنوز صفحهٔ خالی دارد؛ ۹ دستهٔ نوشتهٔ خالی نیز در [REST](https://ghatehresan.ir/wp-json/wp/v2/categories?per_page=100&_fields=id,slug,name,count&_audit=20260924b) دیده می‌شوند. `/blog/` بدون query همچنان نوشته‌های سابق را در ظاهر نشان می‌دهد؛ cache/بلاک‌های قدیمی باید بررسی شوند. اگر پاک‌سازی پیش از export/backup انجام شده، فهرست تاریخی این سند را برای بازیابی URL/بررسی سفارش و GSC نگه دارید؛ **از روی صرفِ 404 بصری ریدایرکت حدسی نسازید**.
+
+## موجودی تاریخیِ محصولات منتشرشده پیش از پاک‌سازی (۱۸ عدد)
 
 منبع: [REST محصولات](https://ghatehresan.ir/wp-json/wp/v2/product?per_page=100&_fields=id,slug,title,product_brand,product_cat). Base فعلی `/product/{slug}/`؛ ثبت slugهای منتشرشده برای جلوگیری از حذف نابینا:
 
@@ -27,7 +29,7 @@
  835 apple-macbook-pro-16%e2%80%b3-m1-pro
 ```
 
-**احتیاط:** متن عنوان و slug محصول demo حتی با هم ناسازگارند؛ URLِ منبع را از export و crawl نهایی عیناً بگیرید، نه از تبدیل دلخواهِ این جدول. [REST دسته‌ها](https://ghatehresan.ir/wp-json/wp/v2/product_cat?per_page=100&_fields=id,slug,name,parent,count) ده‌ها مسیر `megaelectronic_*` از جمله والد/فرزند و دستهٔ خالی دارد؛ این سند همهٔ archive/pagination/صفحه‌های query آنها را پوشش نمی‌دهد.
+**احتیاط:** متن عنوان و slug محصول demo حتی با هم ناسازگار بودند؛ URLهای قدیمی را از ثبت تاریخی این جدول و در صورت وجود از backup/GSC بازیابی کنید، نه از تبدیل دلخواه عنوان. پیش از پاک‌سازی [REST دسته‌ها](https://ghatehresan.ir/wp-json/wp/v2/product_cat?per_page=100&_fields=id,slug,name,parent,count) ده‌ها مسیر `megaelectronic_*` داشت؛ اکنون فقط یک دستهٔ خالی دیده می‌شود. این سند همهٔ archive/pagination/صفحه‌های query تاریخی آنها را پوشش نمی‌دهد.
 
 ## سایر URLهای مهم برای export
 

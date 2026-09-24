@@ -4,7 +4,7 @@
 
 ## پیش‌نیازهای هر تغییر مؤثر
 
-1. مالک عملیاتی و پنجرهٔ تغییر؛ ثبت نسخهٔ WordPress/Woo/WoodMart/child و لایسنس؛ بررسی فروش فعال demo و سفارش‌های موجود. مسیر دسترسی فقط از روش امن تیم هاست، نه paste کردن credential/API key در Git/گفتگو.
+1. مالک عملیاتی و پنجرهٔ تغییر؛ ثبت نسخهٔ WordPress/Woo/WoodMart/child و لایسنس؛ پس از پاک‌سازی اعلام‌شدهٔ مالک، بررسی سفارش‌های تاریخی، اثر بر URL/کش و محتوای demo باقیمانده. مسیر دسترسی فقط از روش امن تیم هاست، نه paste کردن credential/API key در Git/گفتگو.
 2. **بکاپ کامل** DB + `wp-content/uploads` + config/plugin/theme/runtime در فضای خارج از repo، نسخه‌گذاری و کنترل دسترسی؛ تست restore در محیط جدا. اگر سفارش واقعی/پرداخت وجود دارد، زمان قطع/ناسازگاری بکاپ و rollback تراکنش‌ها با مسئول مالی هماهنگ شود.
 3. Staging محافظت‌شده با HTTP auth یا شبکهٔ محدود **به‌علاوه noindex**، داده‌های مشتری pseudonymized، درگاه sandbox، SMTP mail sink، عدم ارسال SMS واقعی و جداسازی webhook/cron از Production.
 4. crawl کامل و snapshot URL/meta/schema/GSC، export کالاها/سفارش‌ها/menus/settings برای مقایسه؛ [طرح ریدایرکت](redirect-plan.md) قبل از تغییر permalink.
@@ -25,7 +25,7 @@ wp option get permalink_structure
 
 ## ترتیب release پیشنهادی
 
-1. فاز کنترل خطر demo، فقط پس از بکاپ/بررسی سفارش/اطلاع‌رسانی؛ مرحله‌ای و قابل rollback، نه حذف کور.
+1. مالک بخشی از پاک‌سازی demo را انجام داده؛ ابتدا وضعیت بکاپ/سفارش‌های سابق، کش و URLها بررسی شود. محتوای demoِ باقی‌مانده در خانه/تماس/ارسال و ترم‌ها فقط با بکاپ و تصمیم مالک، مرحله‌ای و قابل rollback اصلاح شود.
 2. کد child/core در staging به WordPress موجود *متصل* شود؛ theme والد و plugins vendor دست‌نخورده، استقرار نسخه‌دار و DB migration idempotent/backward-compatible؛ تست بروزرسانی مجدد.
 3. Import محدود کالا با dry-run/preview، validation/منبع و تایید قیمت/fitment؛ پس از آزمون sandbox محصول منتشر شود.
 4. QA صفحه/SEO/کارکرد Woo/امنیت/عملکرد؛ انتشار کوچک در پنجرهٔ تغییر و مشاهدهٔ سفارش/404/error/log/CWV. اگر کارکرد cart/checkout/موجودی افت کرد، feature flag/kill switch و rollback کد با حفظ سفارش‌های ثبت‌شده (نه restore DB کور).

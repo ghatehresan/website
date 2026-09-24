@@ -1,8 +1,10 @@
 # WooCommerce — ممیزی تنظیمات و معیار پذیرش
 
-**منبع مشاهده:** [فروشگاه](https://ghatehresan.ir/shop/)، [محصول نمونه](https://ghatehresan.ir/product/canon-i-sensys-lbp722cdw/)، [Store API](https://ghatehresan.ir/wp-json/wc/store/v1/products?per_page=50)، [اتریبیوت‌ها](https://ghatehresan.ir/wp-json/wc/store/v1/products/attributes)، [برگه‌ها](https://ghatehresan.ir/wp-json/wp/v2/pages?per_page=100&_fields=id,slug,title,link,parent,template). **تنظیمات داخلی/سفارش‌های واقعی دیده نشده‌اند.** این لیست چک‌لیست مرحلهٔ توسعه است، نه تنظیمات انجام‌شده.
+**منبع بررسی اولیه:** [فروشگاه](https://ghatehresan.ir/shop/)، [محصول نمونهٔ سابق](https://ghatehresan.ir/product/canon-i-sensys-lbp722cdw/)، [Store API](https://ghatehresan.ir/wp-json/wc/store/v1/products?per_page=50)، [اتریبیوت‌ها](https://ghatehresan.ir/wp-json/wc/store/v1/products/attributes)، [برگه‌ها](https://ghatehresan.ir/wp-json/wp/v2/pages?per_page=100&_fields=id,slug,title,link,parent,template). **تنظیمات داخلی/سفارش‌های واقعی دیده نشده‌اند.** این لیست چک‌لیست مرحلهٔ توسعه است، نه تنظیمات انجام‌شده.
 
-## وضع فعلی تأییدشده
+**به‌روزرسانی پس از پاک‌سازی مالک:** [Woo Store API](https://ghatehresan.ir/wp-json/wc/store/v1/products?per_page=50&_audit=20260924b) `[]`، فروشگاه عمومی «هیچ محصولی یافت نشد» و محصول نمونهٔ سابق متن «پیدا نشد» نشان می‌دهد. اطلاعات قیمت IRT/وجود محصول در زیر **عکس بررسی اولیه** است و اکنون با کالای قابل فروش راستی‌آزمایی نمی‌شود. سایر تنظیمات همچنان نامعلوم‌اند؛ [گزارش تکمیلی](phase-1-audit.md).
+
+## وضعِ بررسی اولیه (تاریخی)
 
 - ۱۸ کالای منتشرشدهٔ demo الکترونیکی؛ قیمت‌ها با `currency_code=IRT`، نماد «تومان»، minor unit صفر. این اعداد برای فروش واقعیِ قطعات قابل استفاده نیستند. اعتبار واحد پول/قیمت و ذخیره‌سازی Woo توسط مسئول مالی بررسی شود؛ تقسیم/ضرب ۱۰ خودکار ممنوع.
 - سه Attribute: `pa_brand`, `pa_color`, `pa_size`؛ `product_brand` جداگانه وجود دارد اما خالی است. دادهٔ fitment خودرو/SKU واقعی دیده نشد. نمونهٔ پرینتر با وضعیت موجود، تصویر/گالری و توضیح/نظر dummy نمایش داده می‌شود؛ «اصالت/زمان تحویل/تخفیف» از آن قابل استناد نیست.
@@ -12,7 +14,7 @@
 
 | بخش | سؤال ممیزی | کار لازم فقط پس از بکاپ/داده |
 |---|---|---|
-| کاتالوگ | چند محصول واقعی، ساده/متغیر؛ SKU یکتا؛ status/backorder/hold stock؟ | کالاهای demo را از سفارش واقعی جدا و پس از بررسی سفارش/URL پاکسازی؛ ورود نمونهٔ تاییدشده |
+| کاتالوگ | اکنون ۰ محصول منتشرشده؛ آیا سفارش/موجودی/نسخهٔ تاریخی مرتبط با SKUهای حذف‌شده هست؟ | تأیید بکاپ/سفارش/URL پاک‌سازی مالک؛ ورود **محدودِ کالای واقعی و تاییدشده** با dry-run |
 | موجودی و تامین | on-hand vs سفارش‌محور/زمان تامین چیست؟ | «موجود» فقط on-hand تایید؛ lead time/تایید تامین قبل از پرداخت طبق سیاست؛ رزرو موجودی و منع oversell |
 | پول | IRT و نرخ مالی/مالیات مصوب؛ rounding/discount؟ | تطبیق Woo ↔ درگاه ↔ فاکتور، کوپن/refund و قیمت متغیر؛ بدون ادعای تخفیف ساختگی |
 | پرداخت | gatewayهای فعال، TLS و webhook/بازگشت پرداخت؟ | sandbox، موفق/ناموفق/نامعلوم و retry idempotent؛ اطلاعات بانکی در Git/فرانت نیست |

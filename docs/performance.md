@@ -1,6 +1,6 @@
 # عملکرد و Core Web Vitals — برنامهٔ اندازه‌گیری
 
-**نتیجهٔ فعلی ممیزی:** هنوز هیچ اندازهٔ معتبر LCP/INP/CLS، TTFB، requests یا page weight ثبت نشده و به HTML خام/هدرهای cache/CDN دسترسی نداشتیم. [صفحهٔ خانه در REST](https://ghatehresan.ir/wp-json/wp/v2/pages/14?_fields=id,slug,content.rendered) نشانهٔ اسلایدر Elementor/WoodMart و حداقل ارتفاع 460px دارد؛ [محصول نمونه](https://ghatehresan.ir/product/canon-i-sensys-lbp722cdw/) دارای گالری حجیم و تصاویر دمویی است. **این نشانه‌ها علت اثبات‌شدهٔ کندی نیستند.** فروشندهٔ [WoodMart](https://www.rtl-theme.com/woodmart/) ادعای سرعت دارد، اما benchmark نصب قطعه‌رسان محسوب نمی‌شود.
+**نتیجهٔ فعلی ممیزی:** هنوز هیچ اندازهٔ معتبر LCP/INP/CLS، TTFB، requests یا page weight ثبت نشده و به HTML خام/هدرهای cache/CDN دسترسی نداشتیم. [صفحهٔ خانه در REST](https://ghatehresan.ir/wp-json/wp/v2/pages/14?_fields=id,slug,content.rendered) نشانهٔ اسلایدر Elementor/WoodMart و حداقل ارتفاع 460px دارد؛ [محصول نمونهٔ سابق](https://ghatehresan.ir/product/canon-i-sensys-lbp722cdw/) در بررسی اولیه گالری حجیم و تصاویر دمویی داشت؛ اکنون صفحهٔ «پیدا نشد» نمایش می‌دهد. **این نشانه‌ها علت اثبات‌شدهٔ کندی نیستند.** فروشندهٔ [WoodMart](https://www.rtl-theme.com/woodmart/) ادعای سرعت دارد، اما benchmark نصب قطعه‌رسان محسوب نمی‌شود.
 
 ## Baseline قبل از هر optimization
 

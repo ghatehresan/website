@@ -1,6 +1,6 @@
 # معماری کاتالوگ و دسته‌بندی — طرح مشروط
 
-**وضعیت:** هیچ دستهٔ قطعهٔ خودرو یا Attribute تازه‌ای ایجاد نشده است. در وب‌سایت `product_cat` با `megaelectronic_*` وجود دارد؛ مخزن مدیریت ۹ نام دستهٔ seed و صفر محصول واقعی دارد. مبنا: [ممیزی](phase-1-audit.md)، [استراتژی برند در بستهٔ رسمی](https://github.com/ghatehresan/brand-ghatehresan/blob/fe9d144e33ce2416db0b7a1469644a085d637a20/brand-ghatehresan.zip) و [schema مدیریت](https://github.com/ghatehresan/ghatehresan-management-system/blob/75b1a462f0e71cde42967f9aa28cbb603b6b8669/ghatehresan-management-system.zip)؛ هیچ‌یک کاتالوگ فروش واقعی نیستند.
+**وضعیت:** ما هیچ دستهٔ قطعهٔ خودرو یا Attribute تازه‌ای ایجاد نکرده‌ایم. پیش از پاک‌سازی مالک ده‌ها `product_cat` از نوع `megaelectronic_*` وجود داشت؛ اکنون در [REST عمومی](https://ghatehresan.ir/wp-json/wp/v2/product_cat?per_page=100&_fields=id,slug,name,count&_audit=20260924b) فقط یک دستهٔ خالی با slug `megaelectronic_accessories` دیده می‌شود. مخزن مدیریت ۹ نام دستهٔ seed و صفر محصول واقعی دارد. مبنا: [ممیزی](phase-1-audit.md)، [استراتژی برند در بستهٔ رسمی](https://github.com/ghatehresan/brand-ghatehresan/blob/fe9d144e33ce2416db0b7a1469644a085d637a20/brand-ghatehresan.zip) و [schema مدیریت](https://github.com/ghatehresan/ghatehresan-management-system/blob/75b1a462f0e71cde42967f9aa28cbb603b6b8669/ghatehresan-management-system.zip)؛ هیچ‌یک کاتالوگ فروش واقعی نیستند.
 
 ## چهار مفهوم جدا
 
@@ -41,7 +41,7 @@
 ## فیلتر و جست‌وجو
 
 - همگانی: قیمت، وضعیت واقعیِ قابل سفارش، برند قطعهٔ تأییدشده، خودرو/مدلِ منتخب. Category-dependent: `position` برای ترمز/چراغ، روغن/ویسکوزیته فقط در روغن، موتور فقط در قطعات مربوط. سال/تیپ تنها اگر ماتریس fitment معتبر و شمار SKU کافی است. فیلتر «اصل/غیراصل» بدون مستندات SKU ایجاد نشود.
-- normalize ورودی: `ي/ی`، `ك/ک`، ارقام فارسی/عربی، نیم‌فاصله/فاصله و case انگلیسی؛ **شمارهٔ فنی اصلی و صفرهای آغازین را تغییر ندهید**. وزن جست‌وجو: تطابق دقیق SKU/OEM/شماره فنی بالاتر از نام/برند، سپس سازگاری خودرو. آزمون روی نمونهٔ واقعی و precision/recall قبل از افزودن Elasticsearch/OpenSearch/Meilisearch؛ حجم ۱۸ محصول demo دلیل ارتقا نیست.
+- normalize ورودی: `ي/ی`، `ك/ک`، ارقام فارسی/عربی، نیم‌فاصله/فاصله و case انگلیسی؛ **شمارهٔ فنی اصلی و صفرهای آغازین را تغییر ندهید**. وزن جست‌وجو: تطابق دقیق SKU/OEM/شماره فنی بالاتر از نام/برند، سپس سازگاری خودرو. آزمون روی نمونهٔ واقعی و precision/recall قبل از افزودن Elasticsearch/OpenSearch/Meilisearch؛ حجم ۱۸ محصول demo در بررسی اولیه (اکنون صفر محصول عمومی) دلیل ارتقا نیست.
 - URL فیلتر/مرتب‌سازی: پیش‌فرض canonical به archive اصلی و noindex طبق [seo.md](seo.md)، نه ساخت صدها لندینگ ترکیبی. فقط لندینگ‌های دستی و دارای متن/محصول کافی.
 
 ## Gate ورود/انتشار

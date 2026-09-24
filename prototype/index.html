@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0E2A47">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="پیش‌نمایش مفهومی و غیرتجاری طراحی وب‌سایت قطعه‌رسان؛ بدون اتصال به کاتالوگ یا سایت اصلی.">
+  <title>پیش‌نمایش تجربهٔ قطعه‌رسان — فقط طرح</title>
+  <link rel="icon" type="image/png" href="assets/favicon-32.png">
+  <link rel="preload" href="assets/fonts/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
+
+  <div class="preview-ribbon" role="note">
+    <div class="container preview-ribbon__inner">
+      <span class="preview-ribbon__label"><span class="status-dot" aria-hidden="true"></span> پیش‌نمایش طراحی · به سایت اصلی متصل نیست</span>
+      <a href="#roadmap">قدم‌به‌قدم با هم پیش می‌رویم <span aria-hidden="true">↙</span></a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="قطعه‌رسان، بازگشت به ابتدای صفحه">
+        <img class="brand__mark" src="assets/mark-navy.png" width="46" height="46" alt="">
+        <span class="brand__wordmark"><strong>قطعه‌<span>رسان</span></strong><small lang="en" dir="ltr">GHATEHRESAN</small></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="ناوبری پیش‌نمایش">
+        <a href="#finder">پیدا کردن قطعه</a>
+        <a href="#approach">مسیر انتخاب</a>
+        <a href="#catalog">فروشگاه آینده</a>
+        <a href="#roadmap">مراحل کار</a>
+      </nav>
+
+      <a class="header-action" href="#your-part">کار من چیست؟ <span aria-hidden="true">↙</span></a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="باز کردن منو">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <div class="eyebrow eyebrow--light"><span class="eyebrow__dash"></span> یک مسیر تازه برای قطعه‌رسان <span class="hero__edition" lang="en" dir="ltr">PREVIEW / 01</span></div>
+          <h1 id="hero-title">قطعه را پیدا کن.<br><span>با آگاهی انتخاب کن.</span></h1>
+          <p class="hero__lead">تصویری از آیندهٔ فروشگاه: جست‌وجوی ساده، بررسی سازگاری و اطلاعات روشن. نتیجهٔ واقعی فقط بعد از اتصال داده‌های تأییدشده نمایش داده می‌شود.</p>
+          <div class="hero__actions">
+            <a class="button button--orange" href="#finder">پیش‌نمایش جست‌وجو <span aria-hidden="true">↙</span></a>
+            <a class="hero__text-link" href="#roadmap">ببینیم قدم بعدی چیست <span aria-hidden="true">↙</span></a>
+          </div>
+          <div class="hero__slogan"><span class="hero__slogan-line" aria-hidden="true"></span><span>«قطعه‌ات رو می‌رسونیم»</span><small>شعار رسمی برند</small></div>
+        </div>
+        <div class="hero__visual">
+          <img src="assets/brand-mood-hero.jpg" width="1408" height="768" alt="">
+          <div class="hero__image-caption"><span class="hero__caption-dot" aria-hidden="true"></span> تصویر مفهومی از بستهٔ برند؛ عکس کالای قابل فروش نیست</div>
+          <div class="hero__corner-number" aria-hidden="true">01<span>/</span>03</div>
+        </div>
+      </div>
+      <div class="hero__edge" aria-hidden="true"></div>
+    </section>
+
+    <section class="finder-section" id="finder" aria-labelledby="finder-title">
+      <div class="container">
+        <div class="finder-card">
+          <div class="finder-card__intro">
+            <div>
+              <span class="section-kicker"><span class="section-kicker__line"></span> نقطهٔ شروع</span>
+              <h2 id="finder-title">از کجا دنبالش بگردیم؟</h2>
+              <p>این بخش قابل کلیک است، اما هنوز به محصول یا خودرو متصل نیست.</p>
+            </div>
+            <div class="finder-card__stamp" aria-hidden="true">01 <span>/</span> SEARCH</div>
+          </div>
+
+          <div class="finder-tabs" role="tablist" aria-label="روش پیدا کردن قطعه">
+            <button class="finder-tab is-active" type="button" role="tab" id="tab-part" aria-controls="panel-part" aria-selected="true" tabindex="0">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+              جست‌وجو با نام یا کد
+            </button>
+            <button class="finder-tab" type="button" role="tab" id="tab-vehicle" aria-controls="panel-vehicle" aria-selected="false" tabindex="-1">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 15 1.5-6a2 2 0 0 1 1.9-1.5h9.2a2 2 0 0 1 1.9 1.5L20 15v3H4zM7 18v2m10-2v2M4 14h16M6 11h12"></path></svg>
+              انتخاب خودرو
+              <span class="finder-tab__soon">به‌زودی</span>
+            </button>
+          </div>
+
+          <div class="finder-panel" role="tabpanel" id="panel-part" aria-labelledby="tab-part">
+            <div id="part-search" role="search" aria-label="جست‌وجوی نمایشی قطعه">
+              <label class="form-label" for="part-query">نام قطعه یا شمارهٔ فنی</label>
+              <div class="search-control">
+                <div class="search-control__input-wrap">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+                  <input id="part-query" name="q" type="search" autocomplete="off" maxlength="80" placeholder="نام یا شمارهٔ قطعه را بنویسید..." aria-describedby="search-hint">
+                </div>
+                <button class="button button--navy" id="search-trigger" type="button">جست‌وجو <span aria-hidden="true">↙</span></button>
+              </div>
+              <p class="form-hint" id="search-hint"><span aria-hidden="true">✳</span> هیچ عبارت جست‌وجویی به سرور یا سایت اصلی ارسال نمی‌شود.</p>
+            </div>
+            <div class="search-feedback" id="search-feedback" role="status" aria-live="polite" hidden>
+              <div class="search-feedback__icon" aria-hidden="true">!</div>
+              <div><strong id="feedback-title"></strong><p id="feedback-detail"></p></div>
+            </div>
+          </div>
+
+          <div class="finder-panel finder-panel--vehicle" role="tabpanel" id="panel-vehicle" aria-labelledby="tab-vehicle" hidden>
+            <div class="vehicle-preview">
+              <div class="vehicle-field"><span>۰۱ / سازندهٔ خودرو</span><strong>بعد از تأیید داده‌ها</strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div>
+              <div class="vehicle-field"><span>۰۲ / مدل و تیپ</span><strong>بعد از تأیید داده‌ها</strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div>
+              <div class="vehicle-field"><span>۰۳ / سال و موتور</span><strong>بعد از تأیید داده‌ها</strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div>
+            </div>
+            <p class="vehicle-note"><span class="vehicle-note__icon" aria-hidden="true">i</span> هیچ فهرست خودرو یا نتیجهٔ سازگاریِ حدسی نمایش نمی‌دهیم. بعد از دریافت اطلاعات تأییدشده، این مسیر فعال می‌شود.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="approach-section section-space" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="section-heading section-heading--split">
+          <div><span class="section-kicker"><span class="section-kicker__line"></span> تجربه‌ای که می‌سازیم</span><h2 id="approach-title">پیدا کردن قطعه،<br><span>فقط نصف ماجراست.</span></h2></div>
+          <p>برای خرید قطعه، سؤال اصلی این است: «به خودروی من می‌خورد؟» طراحی باید به این سؤال جواب روشن بدهد؛ نه حدس و نه یک برچسبِ بی‌منبع.</p>
+        </div>
+        <div class="path-grid">
+          <article class="path-card">
+            <div class="path-card__top"><span>01 / FIND</span><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="21" cy="21" r="12"></circle><path d="m30 30 11 11"></path></svg></div>
+            <h3>از هر سرنخی شروع کن</h3>
+            <p>نام قطعه یا شمارهٔ فنی؛ با ورودی فارسی و لاتین. جست‌وجوی واقعی پس از کاتالوگ معتبر فعال می‌شود.</p>
+            <span class="path-card__line" aria-hidden="true"></span>
+          </article>
+          <article class="path-card">
+            <div class="path-card__top"><span>02 / MATCH</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 29 11 17a4 4 0 0 1 4-3h18a4 4 0 0 1 4 3l4 12v7H7zM13 36v4m22-4v4M7 27h34M11 21h26"></path></svg></div>
+            <h3>سازگاری را بررسی کن</h3>
+            <p>مدل، سال و موتور خودرو مهم‌اند. تا وقتی تطابق مستند نباشد، وضعیت را «نامشخص» نشان می‌دهیم.</p>
+            <span class="path-card__line" aria-hidden="true"></span>
+          </article>
+          <article class="path-card path-card--highlight">
+            <div class="path-card__top"><span>03 / DECIDE</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 5 16 8v11c0 11-7 17-16 20C15 41 8 35 8 24V13zM17 24l5 5 10-11"></path></svg></div>
+            <h3>با اطلاعات روشن تصمیم بگیر</h3>
+            <p>قیمت، وضعیت تأمین و مسیر خرید فقط زمانی نمایش داده می‌شوند که واقعی، قابل پیگیری و تأییدشده باشند.</p>
+            <span class="path-card__line" aria-hidden="true"></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section section-space" id="catalog" aria-labelledby="catalog-title">
+      <div class="container catalog-layout">
+        <div class="catalog-copy">
+          <span class="section-kicker"><span class="section-kicker__line"></span> فروشگاه آینده</span>
+          <h2 id="catalog-title">جای کالاهای واقعی<br><span>از همین‌جا باز می‌شود.</span></h2>
+          <p>کارت محصول، دسته‌ها، قیمت و نشان سازگاری را با اطلاعات نمونه پر نمی‌کنیم. وقتی اولین گروه کالای تأییدشده آماده شد، همین بخش روی دادهٔ واقعی طراحی و آزموده می‌شود.</p>
+          <a href="#your-part" class="text-action">برای شروع چه چیزی لازم است؟ <span aria-hidden="true">↙</span></a>
+        </div>
+        <div class="catalog-frame" aria-label="نمایش جایگاه خالی کاتالوگ آینده">
+          <div class="catalog-frame__bar"><div class="catalog-frame__dots" aria-hidden="true"><span></span><span></span><span></span></div><span>نمای فروشگاه / هنوز بدون کالا</span><span class="catalog-frame__counter" lang="en" dir="ltr">00 ITEMS</span></div>
+          <div class="catalog-frame__content">
+            <div class="catalog-frame__outline" aria-hidden="true"><img src="assets/mark-navy.png" alt="" width="92" height="92"></div>
+            <span class="catalog-frame__label">فضای محصول واقعی</span>
+            <h3>فعلاً محصولی برای نمایش نیست.</h3>
+            <p>اول اطلاعات معتبر؛ بعد تصویر، قیمت و دکمهٔ خرید.</p>
+            <span class="catalog-frame__bottom" aria-hidden="true"><span></span><span></span><span></span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmap-section section-space" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="container">
+        <div class="section-heading"><span class="section-kicker"><span class="section-kicker__line"></span> با هم، قدم‌به‌قدم</span><h2 id="roadmap-title">از پیش‌نمایش تا فروشگاه واقعی</h2><p>هر مرحله یک خروجی مشخص دارد؛ هیچ مرحله‌ای را با دادهٔ ساختگی جلو نمی‌بریم.</p></div>
+        <div class="roadmap-grid">
+          <article class="roadmap-card roadmap-card--current"><span class="roadmap-card__step">مرحلهٔ ۰۱ <i>الان</i></span><h3>دیدن و اصلاح طرح</h3><p>شما ظاهر و مسیر جست‌وجو را می‌بینید و می‌گویید چه چیزی باید عوض شود. من بر اساس بازخوردتان نسخهٔ بعد را آماده می‌کنم.</p><div class="roadmap-card__owner"><strong>کار شما</strong><span>بازخورد روشن روی همین پیش‌نمایش</span></div></article>
+          <article class="roadmap-card"><span class="roadmap-card__step">مرحلهٔ ۰۲</span><h3>زیرساخت امن</h3><p>بکاپ قابل بازیابی، محیط Staging و بررسی تنظیمات سایت؛ بدون دستکاری مستقیمِ قالب اصلی یا تغییر Production.</p><div class="roadmap-card__owner"><strong>کار شما</strong><span>هماهنگی Staging و بکاپ با مسئول هاست</span></div></article>
+          <article class="roadmap-card"><span class="roadmap-card__step">مرحلهٔ ۰۳</span><h3>دادهٔ واقعی</h3><p>با چند کالای تأییدشده، مدل دسته، برند و سازگاری را می‌بندیم و ورود آزمایشی را روی Staging انجام می‌دهیم.</p><div class="roadmap-card__owner"><strong>کار شما</strong><span>فایل محصول، قیمت، تأمین و سازگاریِ مستند</span></div></article>
+          <article class="roadmap-card"><span class="roadmap-card__step">مرحلهٔ ۰۴</span><h3>ساخت، تست، انتشار</h3><p>پیاده‌سازی مرحله‌ای، آزمون خرید آزمایشی و موبایل، نقشهٔ URL و برنامهٔ بازگشت؛ سپس انتشار با تأیید شما.</p><div class="roadmap-card__owner"><strong>کار شما</strong><span>تأیید سیاست‌ها و نتیجهٔ تست‌ها</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="next-section" id="your-part" aria-labelledby="next-title">
+      <div class="container next-layout">
+        <div class="next-copy">
+          <span class="eyebrow eyebrow--light"><span class="eyebrow__dash"></span> از اینجا شروع کنیم</span>
+          <h2 id="next-title">خب، الان نوبت<br><span>کدوم قدمه؟</span></h2>
+          <p>اول همین طرح را بررسی کن. برای رفتن به ساخت فروشگاه، این چهار مورد را قدم‌به‌قدم آماده می‌کنیم. علامت‌زدن موارد فقط روی مرورگر خودت ذخیره می‌شود و به ما ارسال نمی‌شود.</p>
+          <div class="next-copy__note"><span aria-hidden="true">↗</span><span>رمز، کلید درگاه، بکاپ یا اطلاعات شخصی مشتری را در گفتگو و مخزن قرار نده.</span></div>
+        </div>
+        <div class="checklist">
+          <div class="checklist__header"><div><span>چک‌لیست همکاری</span><h3>قدم‌های شما</h3></div><div class="checklist__progress" id="progress-label" aria-live="polite">۰ از ۴</div></div>
+          <div class="progress-track" role="progressbar" id="progress-track" aria-label="پیشرفت چک‌لیست" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><span id="progress-fill"></span></div>
+          <div class="checklist__items">
+            <label class="check-item"><input type="checkbox" data-task="review"><span class="check-item__box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"></path></svg></span><span><strong>طرح را ببین و نظرت را بگو</strong><small>ظاهر، متن، بخش جست‌وجو و تجربهٔ موبایل</small></span><em>الان</em></label>
+            <label class="check-item"><input type="checkbox" data-task="staging"><span class="check-item__box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"></path></svg></span><span><strong>بکاپ و Staging را هماهنگ کن</strong><small>با مسئول هاست؛ بازیابی بکاپ هم تست شود</small></span></label>
+            <label class="check-item"><input type="checkbox" data-task="products"><span class="check-item__box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"></path></svg></span><span><strong>چند کالای واقعی آماده کن</strong><small>نام، کد، برند، قیمت، وضعیت تأمین و سازگاری</small></span></label>
+            <label class="check-item"><input type="checkbox" data-task="policies"><span class="check-item__box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"></path></svg></span><span><strong>اطلاعات کسب‌وکار را تأیید کن</strong><small>تماس، ارسال، مرجوعی و شیوهٔ پاسخ‌گویی</small></span></label>
+          </div>
+          <div class="checklist__footer"><button id="copy-steps" type="button">کپی فهرست کارها <span aria-hidden="true">↖</span></button><span id="copy-status" role="status" aria-live="polite"></span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="footer-brand" href="#top" aria-label="قطعه‌رسان، بازگشت به بالا"><img src="assets/mark-white.png" width="42" height="42" alt=""><span>قطعه‌<b>رسان</b></span></a>
+      <p>پیش‌نمایش مفهومی؛ نه فروشگاه فعال، نه موجودی یا وعدهٔ فروش. طراحی بر اساس هویت رسمی برند.</p>
+      <a href="#top">بازگشت به بالا <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>

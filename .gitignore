@@ -1,0 +1,18 @@
+# Local build/test artifacts
+__pycache__/
+*.py[cod]
+node_modules/
+
+# Runtime data and secrets (never commit to the site repository)
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+*.sql.gz
+*.bak
+*.zip
+backups/
+*.log

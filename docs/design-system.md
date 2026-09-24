@@ -1,4 +1,6 @@
-# سیستم طراحی پیشنهادی قطعه‌رسان — نسخهٔ ممیزی (اجرا نشده)
+# سیستم طراحی پیشنهادی قطعه‌رسان — نسخهٔ ممیزی (هنوز روی WordPress/Production اجرا نشده)
+
+بخشی از این مشخصات صرفاً در [پیش‌نمایش ایزوله](../prototype/README.md) به نمایش درآمده است؛ آن نمونه جایگزین پیاده‌سازی child theme یا آزمون روی Staging نیست.
 
 **مرجع قطعی:** [بستهٔ رسمی برند، commit `fe9d144`](https://github.com/ghatehresan/brand-ghatehresan/blob/fe9d144e33ce2416db0b7a1469644a085d637a20/brand-ghatehresan.zip)، به‌ویژه `brand-book.html#color/#type/#graphic/#photo/#voice` و `رنگ-های-برند.txt`. موکاپ‌های آن نمونهٔ بصری‌اند، نه تعهد تأمین/ارسال.
 
